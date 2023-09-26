@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+</head>
+
+<body>
+
+
+
+    <style>
+        body {
+            background-color: #0A2E54;
+            color: #F5F5F5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        button{
+            border: 1px dashed  #F5F5F5;
+            background-color: transparent;
+            color: #F5F5F5;
+            padding:10px;
+            transition: 0.2s;
+
+        }
+        button:hover{
+            background-color: #F5F5F5;
+            color: #0A2E54;
+            transition: 0.2s;
+            cursor: pointer;
+        }
+
+        img{
+            width: 100%;
+            max-height: 300px;
+            border-radius: 15px;
+            transition: 2s;
+        }
+
+    </style>
+    <h1>DOM Manipulation</h1>
+
+
+    <div class="" style="max-width: 500px;">
+        <!-- if click button change content -->
+        <!-- can use class name or id -->
+        <div class="" style="text-align: center;">
+            <button id="button" >Change Image <b>src</b></button>
+        </div>
+        <!-- content -->
+        <div class="" style="margin-top: 20px;">
+            <img id="image" src="https://images.pexels.com/photos/807598/pexels-photo-807598.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+        </div>
+    </div>
+
+
+
+
+
+    <script>
+
+        // step - 1
+        document.getElementById("button") // id name "button"
+        // step - 2
+        console.log(document.getElementById("button"))
+        //step - 3
+        // declare a variable 
+        const button = document.getElementById("button");
+        // step - 4
+        document.getElementById("image");
+        // step - 5
+        console.log(document.getElementById("image"))
+        //step - 6
+        // declare a variable 
+         const image = document.getElementById("image");
+
+        // finally click button , change image content
+        button.addEventListener("click",function (params) {
+            image.src = 'https://images.pexels.com/photos/1379640/pexels-photo-1379640.jpeg?auto=compress&cs=tinysrgb&w=600'
+        }) 
+        // addEventListener is method , 
+        //click is a event
+        // innerHTML = to use change content
+
+
+    </script>
+
+</body>
+
+</html>
